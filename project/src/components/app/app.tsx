@@ -1,6 +1,7 @@
 //import Main from '../main/main';
 //import MoviePage from '../movie-page/movie-page';
-import MyList from '../my-list/my-list';
+//import MyList from '../my-list/my-list';
+import SignIn from '../sign-in/sign-in';
 /*
 interface Film {
   name: string,
@@ -26,7 +27,8 @@ function App(): JSX.Element {
   return (
     //<Main {...film}></Main>
     //<MoviePage {...film}></MoviePage>
-    <MyList></MyList>
+    //<MyList></MyList>
+    <SignIn></SignIn>
   );
 }
 
