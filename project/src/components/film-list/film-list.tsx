@@ -1,13 +1,17 @@
 import React from 'react';
 import SmallFilmCard from '../small-film-card/small-film-card';
 
-interface FilmPreview {
+type FilmPreview = {
   name: string,
   previewImage: string,
   videoLink: string,
 }
 
-function FilmPreviewList ({ filmsCount } : any) : JSX.Element {
+type FilmPreviewListProps = {
+  filmsCount: number
+}
+
+function FilmPreviewList ({ filmsCount } : FilmPreviewListProps) : JSX.Element {
 
   const filmPreview : FilmPreview = {
     name: 'Fantastic Beasts: The Crimes of Grindelwald',
