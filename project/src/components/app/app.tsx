@@ -1,5 +1,7 @@
-import Main from '../main/main';
+//import Main from '../main/main';
 //import MoviePage from '../movie-page/movie-page';
+import MyList from '../my-list/my-list';
+/*
 interface Film {
   name: string,
   posterImage: string,
@@ -19,11 +21,12 @@ const film : Film = {
   genre: 'Comedy',
   released: 2014,
 };
-
+*/
 function App(): JSX.Element {
   return (
-    <Main {...film}></Main>
+    //<Main {...film}></Main>
     //<MoviePage {...film}></MoviePage>
+    <MyList></MyList>
   );
 }
 
