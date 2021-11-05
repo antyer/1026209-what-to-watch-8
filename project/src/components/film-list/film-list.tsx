@@ -32,7 +32,7 @@ function FilmPreviewList ({ filmsCount } : FilmPreviewListProps) : JSX.Element {
 }
 
 FilmPreviewList.defaultProps = {
-  filmsCount : 4,
+  filmsCount : 8,
 };
 
 export default FilmPreviewList;

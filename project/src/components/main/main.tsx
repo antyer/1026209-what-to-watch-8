@@ -113,7 +113,7 @@ function Main (props: Film) : JSX.Element {
           </ul>
 
           <div className="catalog__films-list">
-            <FilmPreviewList filmsCount={20}></FilmPreviewList>
+            <FilmPreviewList></FilmPreviewList>
           </div>
 
           <div className="catalog__more">
