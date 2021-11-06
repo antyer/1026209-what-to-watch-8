@@ -1,28 +1,35 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import PrivateRoute from '../private-route/private-route';
 import Main from '../main/main';
 import MoviePage from '../movie-page/movie-page';
 import MyList from '../my-list/my-list';
 import SignIn from '../sign-in/sign-in';
 import AddReview from '../add-review/add-review';
 import Player from '../player/player';
+import {AppRoute, AuthorizationStatus} from '../const/const';
 
 function App(): JSX.Element {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/' exact component={Main}>
+        <Route path={AppRoute.Main} exact component={Main}>
         </Route>
-        <Route path='/login' exact component={SignIn}>
+        <Route path={AppRoute.SignIn} exact component={SignIn}>
         </Route>
-        <Route path='/mylist' exact component={MyList}>
+        <Route path={AppRoute.MoviePage} exact component={MoviePage}>
         </Route>
-        <Route path='/films/:id?' exact component={MoviePage}>
+        <Route path={AppRoute.AddReview} exact component={AddReview}>
         </Route>
-        <Route path='/films/:id/review' exact component={AddReview}>
+        <Route path={AppRoute.Player} exact component={Player}>
         </Route>
-        <Route path='/player/:id' exact component={Player}>
-        </Route>
+        <PrivateRoute
+          exact
+          path={AppRoute.MyList}
+          render={() => <MyList />}
+          authorizationStatus={AuthorizationStatus.Auth}
+        >
+        </PrivateRoute>
         <Route
           render={() => (
             <React.Fragment>

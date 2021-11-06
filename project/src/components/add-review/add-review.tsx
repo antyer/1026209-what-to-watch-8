@@ -1,3 +1,4 @@
+import Logo from '../logo/logo';
 
 type Id = {
   id: number
@@ -25,18 +26,9 @@ function AddReview ({id} : Id) :JSX.Element {
         <div className="film-card__bg">
           <img src={posterImage} alt={name} />
         </div>
-
         <h1 className="visually-hidden">WTW</h1>
-
         <header className="page-header">
-          <div className="logo">
-            <a href="main.html" className="logo__link">
-              <span className="logo__letter logo__letter--1">W</span>
-              <span className="logo__letter logo__letter--2">T</span>
-              <span className="logo__letter logo__letter--3">W</span>
-            </a>
-          </div>
-
+          <Logo></Logo>
           <nav className="breadcrumbs">
             <ul className="breadcrumbs__list">
               <li className="breadcrumbs__item">
