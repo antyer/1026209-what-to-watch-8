@@ -26,7 +26,7 @@ function FilmPreviewList ({ filmsCount } : FilmPreviewListProps) : JSX.Element {
 
   return (
     <React.Fragment>
-      {filmPreviewList.map( (item, i) => <SmallFilmCard key={Math.random() * 1000 } {...item}></SmallFilmCard>)}
+      {filmPreviewList.map( (item, i) => <SmallFilmCard key={item.name} {...item}></SmallFilmCard>)}
     </React.Fragment>
   );
 }

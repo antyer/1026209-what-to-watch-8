@@ -1,9 +1,29 @@
-function AddReview () :JSX.Element {
+
+type Id = {
+  id: number
+}
+
+type AddReviewFilm = {
+  name: string,
+  posterImage: string,
+}
+
+function AddReview ({id} : Id) :JSX.Element {
+  const film : AddReviewFilm = {
+    name: 'The Grand Budapest Hotel',
+    posterImage: 'img/the-grand-budapest-hotel-poster.jpg',
+  };
+
+  const {
+    name,
+    posterImage,
+  } = film;
+
   return (
     <section className="film-card film-card--full">
       <div className="film-card__header">
         <div className="film-card__bg">
-          <img src="img/bg-the-grand-budapest-hotel.jpg" alt="The Grand Budapest Hotel" />
+          <img src={posterImage} alt={name} />
         </div>
 
         <h1 className="visually-hidden">WTW</h1>
@@ -20,7 +40,7 @@ function AddReview () :JSX.Element {
           <nav className="breadcrumbs">
             <ul className="breadcrumbs__list">
               <li className="breadcrumbs__item">
-                <a href="film-page.html" className="breadcrumbs__link">The Grand Budapest Hotel</a>
+                <a href="film-page.html" className="breadcrumbs__link">{name}</a>
               </li>
               <li className="breadcrumbs__item">
                 <a href="/" className="breadcrumbs__link">Add review</a>

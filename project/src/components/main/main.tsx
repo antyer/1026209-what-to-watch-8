@@ -1,22 +1,37 @@
 import React from 'react';
 import FilmPreviewList from '../film-list/film-list';
 
-interface Film {
+type PromoFilm = {
+  id: number | string,
   name: string,
   posterImage: string,
+  previewImage: string,
   backgroundImage: string,
+  videoLink: string,
   genre: string,
   released: number,
 }
 
-function Main (props: Film) : JSX.Element {
+const promoFilm : PromoFilm = {
+  id: 1,
+  name: 'The Grand Budapest Hotel',
+  posterImage: 'img/the-grand-budapest-hotel-poster.jpg',
+  previewImage: 'img/the-grand-budapest-hotel-poster.jpg',
+  backgroundImage: 'img/bg-the-grand-budapest-hotel.jpg',
+  videoLink: 'https://some-link',
+  genre: 'Comedy',
+  released: 2014,
+};
+
+function Main () : JSX.Element {
+
   const {
     name,
     posterImage,
     backgroundImage,
     genre,
     released,
-  } = props;
+  } = promoFilm;
 
   return (
     <React.Fragment>

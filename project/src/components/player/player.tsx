@@ -3,7 +3,17 @@ type Progress = {
   progress: number,
 }
 
-function Player ({currentTime, progress} : Progress) : JSX.Element {
+type FilmId = {
+  id: number
+}
+
+function Player ({id} : FilmId) : JSX.Element {
+  const Progress = {
+    currentTime: '1:01:19',
+    progress: 30,
+  };
+  const {currentTime, progress} : Progress = Progress;
+
   return (
     <div className="player">
       <video src="#" className="player__video" poster="img/player-poster.jpg"></video>
