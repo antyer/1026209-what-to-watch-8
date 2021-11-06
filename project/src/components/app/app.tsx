@@ -2,7 +2,8 @@
 //import MoviePage from '../movie-page/movie-page';
 //import MyList from '../my-list/my-list';
 //import SignIn from '../sign-in/sign-in';
-import AddReview from '../add-review/add-review';
+//import AddReview from '../add-review/add-review';
+import Player from '../player/player';
 /*
 interface Film {
   name: string,
@@ -30,7 +31,8 @@ function App(): JSX.Element {
     //<MoviePage {...film}></MoviePage>
     //<MyList></MyList>
     //<SignIn></SignIn>
-    <AddReview></AddReview>
+    //<AddReview></AddReview>
+    <Player></Player>
   );
 }
 
