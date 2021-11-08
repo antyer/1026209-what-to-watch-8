@@ -1,13 +1,17 @@
 import React from 'react';
 import SmallFilmCard from '../small-film-card/small-film-card';
 
-interface FilmPreview {
+type FilmPreview = {
   name: string,
   previewImage: string,
   videoLink: string,
 }
 
-function FilmPreviewList ({ filmsCount } : any) : JSX.Element {
+type FilmPreviewListProps = {
+  filmsCount: number
+}
+
+function FilmPreviewList ({ filmsCount } : FilmPreviewListProps) : JSX.Element {
 
   const filmPreview : FilmPreview = {
     name: 'Fantastic Beasts: The Crimes of Grindelwald',
@@ -22,13 +26,13 @@ function FilmPreviewList ({ filmsCount } : any) : JSX.Element {
 
   return (
     <React.Fragment>
-      {filmPreviewList.map( (item, i) => <SmallFilmCard key={Math.random() * 1000 } {...item}></SmallFilmCard>)}
+      {filmPreviewList.map( (item, i) => <SmallFilmCard key={item.name} {...item}></SmallFilmCard>)}
     </React.Fragment>
   );
 }
 
 FilmPreviewList.defaultProps = {
-  filmsCount : 4,
+  filmsCount : 8,
 };
 
 export default FilmPreviewList;
